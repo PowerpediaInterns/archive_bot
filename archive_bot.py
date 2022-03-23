@@ -3,7 +3,7 @@
 2. Bot checks for template {{Archive recommendation|date=MONTH DAY, YEAR}}
 3. Bot moves page to [[category:Articles Archived]]
 4. Bot changes template from Archive recommendation to
-   {{Archived|date=CURRENT MONTH, CURRENT DAY, CURRENT YEAR}}
+   {{Archived|date=CURRENT MONTH CURRENT DAY, CURRENT YEAR}}
 """
 import json
 import re
