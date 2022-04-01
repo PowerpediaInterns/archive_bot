@@ -59,7 +59,7 @@ def check_last_page() -> str:
 
 
     #Need to replace ' with " so json.loads() can properly change it from a string to a dict.
-    page_text = page.get().replace('\'', '\"')
+    page_text = page.get().replace("\'", "\'")
     page_contents = json.loads(page_text)
 
     if page_contents['title']:
@@ -76,7 +76,7 @@ def update_last_page(current_page: str) -> None:
     :param: current_page title of page to set revision information of
     :return: none
     """
-    rev = get_revisions(current_page)
+    rev = json.dumps(get_revisions(current_page))
     page = pywikibot.Page(pywikibot.Site(), title=REV_PAGE)
     page.text = rev
     page.save()
